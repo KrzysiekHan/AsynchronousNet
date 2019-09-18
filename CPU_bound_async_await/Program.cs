@@ -10,10 +10,10 @@ namespace CPU_bound_async_await
     {
         static void Main(string[] args)
         {
-            var totalAfterTax = CalculateSomethingAsync(70);
+            var calculateSomething = CalculateSomethingAsync(70);
             DoSomethingSynchronous();
 
-            totalAfterTax.Wait();
+            calculateSomething.Wait();
             Console.ReadLine();
         }
 

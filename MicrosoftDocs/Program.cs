@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,8 +22,20 @@ namespace MicrosoftDocs
             Console.ReadLine();
             ExampleAny();
             Console.ReadLine();
+            AccessTheWebAsync();
+            Console.ReadLine();
         }
 
+        static async Task AccessTheWebAsync()
+        {
+            // You need to add a reference to System.Net.Http to declare client.
+            using (HttpClient client = new HttpClient())
+            {
+                Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
+                string urlContents = await getStringTask;
+                Console.WriteLine("Microsoft docs chars count" + urlContents.Length); 
+            }
+        }
         //równoległe uruchomienie wszystkich tasków
         static async Task ExampleAny()
         {

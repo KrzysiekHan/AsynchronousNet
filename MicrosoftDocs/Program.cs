@@ -36,6 +36,7 @@ namespace MicrosoftDocs
                 Console.WriteLine("Microsoft docs chars count" + urlContents.Length); 
             }
         }
+
         //równoległe uruchomienie wszystkich tasków
         static async Task ExampleAny()
         {

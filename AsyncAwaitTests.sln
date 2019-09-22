@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPU_bound_async_await", "CP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftDocs", "MicrosoftDocs\MicrosoftDocs.csproj", "{0FD6748F-AB30-4184-AD11-84657CBC1180}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncExampleWPF", "AsyncExampleWPF\AsyncExampleWPF.csproj", "{41A67E8D-AB4E-4476-A7CE-234C9ACBB6EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0FD6748F-AB30-4184-AD11-84657CBC1180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FD6748F-AB30-4184-AD11-84657CBC1180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FD6748F-AB30-4184-AD11-84657CBC1180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A67E8D-AB4E-4476-A7CE-234C9ACBB6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A67E8D-AB4E-4476-A7CE-234C9ACBB6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A67E8D-AB4E-4476-A7CE-234C9ACBB6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A67E8D-AB4E-4476-A7CE-234C9ACBB6EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,6 +35,42 @@ namespace AsyncExampleWPF
             resultsTextBox.Text += "\r\nControl returned to startButton_Click.";
         }
 
+        private async void asyncButtonClick(object sender, RoutedEventArgs e)
+        {
+            asyncButton.IsEnabled = false;
+            resultsTextBox.Clear();
+            await SumPageSizesAsync();
+            resultsTextBox.Text += "\r\nControl returned to startButton_Click.";
+            asyncButton.IsEnabled = true;
+
+        }
+
+        private async Task SumPageSizesAsync()
+        {
+            List<string> urlList = SetUpURLList();
+            var total = 0;
+            foreach (var url in urlList)
+            {
+                byte[] urlContents = await GetURLContentsAsync(url);
+                DisplayResults(url, urlContents);
+                total += urlContents.Length;
+            }
+            resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
+        }
+
+        private async Task<byte[]> GetURLContentsAsync(string url)
+        {
+            var content = new MemoryStream();
+            var webReq = (HttpWebRequest)WebRequest.Create(url);
+            using (WebResponse response = await webReq.GetResponseAsync())
+            {
+                using(Stream responseStream = response.GetResponseStream())
+                {
+                    await responseStream.CopyToAsync(content);
+                }
+            }
+            return content.ToArray();
+        }
         private void SumPageSizes()
         {
             List<string> urlList = SetUpURLList();

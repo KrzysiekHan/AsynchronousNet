@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="90,71,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Synchronous" HorizontalAlignment="Left" Margin="90,71,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Name="startButton"/>
         <TextBox HorizontalAlignment="Left" Height="250" Margin="90,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500" Name="resultsTextBox"/>
-
+        <Button Content="Asynchronous" HorizontalAlignment="Left" Margin="209,71,0,0" VerticalAlignment="Top" Width="103" Name="asyncButton" Click="asyncButtonClick"/>
     </Grid>
 </Window>

@@ -71,6 +71,7 @@ namespace AsyncExampleWPF
             }
             return content.ToArray();
         }
+
         private void SumPageSizes()
         {
             List<string> urlList = SetUpURLList();

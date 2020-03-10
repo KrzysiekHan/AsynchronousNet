@@ -12,13 +12,18 @@ namespace TaskPlayground
     {
         static void Main(string[] args)
         {
-            ConsumeGetIntWithCancellation();
+            MsDocsTests mstests = new MsDocsTests();
+            Task task = mstests.ConfigureAwaitMethod();
+            task.Start();
+            task.Wait();
             if (false)
             {
+                ConsumeGetIntWithCancellation();
                 TaskWhenAllExample();
                 ConsumeGetIntAsyncMethod();
                 FromResultExample();
             }
+            Console.ReadLine();
 
         }
 
